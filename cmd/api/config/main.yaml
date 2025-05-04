@@ -1,0 +1,41 @@
+# this is just a placeholder for configs
+# real ones are in k8s
+
+# every config needs to be fully initialized
+# application is not gonna start without it
+
+application:
+  version: 0.1.0-snapshot
+
+  database:
+    postgres:
+      addr: ???
+      auth:
+        username: ???
+        password: ???
+        tlsEnabled: false
+
+  # TODO: add timeouts for LLM API calls (15 seconds MAX should be enough)
+  clients:
+    claude:
+      apiKey: ???
+      endpoint: ???
+      model: ???
+      temperature: ???
+      maxTokensToSample: ???
+
+    openai:
+      apiKey: ???
+      endpoint: ???
+      model: ???
+      temperature: ???
+      maxTokensToSample: ???
+
+  server:
+    public:
+      addr: localhost:8080
+      timeout: 5s
+
+  auth:
+    privateKey: ???
+    publicKey: ???
